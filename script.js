@@ -35,6 +35,9 @@ function dragEl(){
           if (e.clientX + draggableRect.width >= parentRect.right) {
             draggable.style.left = `${parentRect.right - draggableRect.width}px`;
           }
+          if (e.clientX + draggableRect.width === parentRect.left) {
+            draggable.style.left = `${parentRect.right - draggableRect.width}px`;
+          }
           //if mouse went out of bounds in Vertical dir.
           if (e.clientY + draggableRect.height >= parentRect.bottom) {
             draggable.style.top = `${parentRect.bottom - draggableRect.height}px`;
